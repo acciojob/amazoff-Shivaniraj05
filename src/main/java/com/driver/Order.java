@@ -25,12 +25,14 @@ public class Order {
     }
 
     public int convertTimeToInteger(String time){
+        int updateTime=0;
         int h1=Integer.parseInt(String.valueOf(time.charAt(0)));
         int h2=Integer.parseInt(String.valueOf(time.charAt(1)));
         int m1=Integer.parseInt(String.valueOf(time.charAt(3)));
         int m2=Integer.parseInt(String.valueOf(time.charAt(4)));
         int h=h1*10+h2;
-        int m=m1*10+h2;
-        return (h*60)+m;
+        int m=m1*10+m2;
+        updateTime = (h*60)+m;
+        return updateTime;
     }
 }
